@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-04T15:47:55Z",
+  "check": "one HTTPS ac=class request per source; no redirect, credentials, code execution, or media download",
+  "source_count": 14,
+  "healthy_count": 13,
+  "sources": [
+    {
+      "key": "vod_quantum",
+      "name": "量子资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 2389,
+      "response_shape": "json:44"
+    },
+    {
+      "key": "vod_sony_xml",
+      "name": "索尼资源 XML",
+      "type": 0,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 2902,
+      "response_shape": "xml"
+    },
+    {
+      "key": "vod_jisu",
+      "name": "极速资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1560,
+      "response_shape": "json:48"
+    },
+    {
+      "key": "vod_suoni",
+      "name": "率率资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 830,
+      "response_shape": "json:61"
+    },
+    {
+      "key": "vod_baidu",
+      "name": "百度资源",
+      "type": 1,
+      "status": "http_error",
+      "http_status": 403,
+      "duration_ms": 778
+    },
+    {
+      "key": "vod_baofeng",
+      "name": "暴風资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1799,
+      "response_shape": "json:49"
+    },
+    {
+      "key": "vod_hongniu",
+      "name": "红牛资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1237,
+      "response_shape": "json:44"
+    },
+    {
+      "key": "vod_guangsu",
+      "name": "光速资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1052,
+      "response_shape": "json:44"
+    },
+    {
+      "key": "vod_dytt",
+      "name": "电影天堂",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 2351,
+      "response_shape": "json:32"
+    },
+    {
+      "key": "vod_tianya",
+      "name": "天涯资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 2006,
+      "response_shape": "json:39"
+    },
+    {
+      "key": "vod_feifan",
+      "name": "非凡资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1218,
+      "response_shape": "json:31"
+    },
+    {
+      "key": "vod_dytt_m3u8",
+      "name": "天堂采集",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1592,
+      "response_shape": "json:32"
+    },
+    {
+      "key": "vod_shandian",
+      "name": "闪电资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1696,
+      "response_shape": "json:59"
+    },
+    {
+      "key": "vod_xinlang",
+      "name": "新浪资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1728,
+      "response_shape": "json:48"
+    }
+  ]
+}

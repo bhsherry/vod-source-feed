@@ -1,0 +1,51 @@
+name: Refresh VOD source feed
+
+on:
+  schedule:
+    # 03:17 Asia/Shanghai (19:17 UTC); avoid the top of the hour.
+    - cron: '17 19 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vod-source-feed
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: true
+
+      - name: Check source category endpoints
+        run: >-
+          python3 bin/vod-public-feed.py check
+          --output public/vod-source-health.json
+          --fail-if-none
+
+      - name: Build direct-import Zyfun and TVBox JSON files
+        run: >-
+          python3 bin/vod-public-feed.py build
+          --health-report public/vod-source-health.json
+          --output public/zyfun-vod-import.json
+          --output public/vod-sources.json
+
+      - name: Commit refreshed files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/zyfun-vod-import.json public/vod-sources.json public/vod-source-health.json
+          if git diff --cached --quiet; then
+            echo "No generated files changed."
+            exit 0
+          fi
+          git commit -m "chore(vod): refresh source feed and health"
+          git push
