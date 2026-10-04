@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-04T16:39:38Z",
+  "checked_at": "2026-10-04T17:37:37Z",
   "check": "one HTTPS ac=class request per source; no redirect, credentials, code execution, or media download",
   "probe_environment": "github-actions/ubuntu-24.04",
-  "source_count": 14,
-  "healthy_count": 13,
+  "source_count": 23,
+  "healthy_count": 23,
   "sources": [
     {
       "key": "vod_dytt_m3u8",
@@ -12,7 +12,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 690,
+      "duration_ms": 583,
       "response_shape": "json:32"
     },
     {
@@ -21,7 +21,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 125,
+      "duration_ms": 516,
       "response_shape": "json:44"
     },
     {
@@ -30,7 +30,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 191,
+      "duration_ms": 172,
       "response_shape": "json:39"
     },
     {
@@ -39,7 +39,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 590,
+      "duration_ms": 542,
       "response_shape": "json:48"
     },
     {
@@ -48,7 +48,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 223,
+      "duration_ms": 473,
       "response_shape": "json:49"
     },
     {
@@ -57,7 +57,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 337,
+      "duration_ms": 159,
       "response_shape": "json:48"
     },
     {
@@ -66,7 +66,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 79,
+      "duration_ms": 300,
       "response_shape": "json:61"
     },
     {
@@ -75,7 +75,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 725,
+      "duration_ms": 686,
       "response_shape": "json:32"
     },
     {
@@ -84,7 +84,7 @@
       "type": 0,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 146,
+      "duration_ms": 276,
       "response_shape": "xml"
     },
     {
@@ -93,7 +93,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 187,
+      "duration_ms": 212,
       "response_shape": "json:44"
     },
     {
@@ -102,7 +102,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 118,
+      "duration_ms": 252,
       "response_shape": "json:44"
     },
     {
@@ -111,16 +111,17 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 130,
+      "duration_ms": 240,
       "response_shape": "json:59"
     },
     {
       "key": "vod_feifan",
       "name": "非凡资源",
       "type": 1,
-      "status": "http_error",
-      "http_status": 403,
-      "duration_ms": 1076
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 508,
+      "response_shape": "json:31"
     },
     {
       "key": "vod_baidu",
@@ -128,8 +129,89 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 110,
+      "duration_ms": 146,
       "response_shape": "json:54"
+    },
+    {
+      "key": "vod_360zy",
+      "name": "360资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 301,
+      "response_shape": "json:51"
+    },
+    {
+      "key": "vod_ffzy",
+      "name": "非凡资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 931,
+      "response_shape": "json:31"
+    },
+    {
+      "key": "vod_liangzi_xml",
+      "name": "量子 XML",
+      "type": 0,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 264,
+      "response_shape": "xml"
+    },
+    {
+      "key": "vod_ffzy_xml",
+      "name": "非凡资源",
+      "type": 0,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1186,
+      "response_shape": "xml"
+    },
+    {
+      "key": "vod_wujin",
+      "name": "无尽资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 247,
+      "response_shape": "json:63"
+    },
+    {
+      "key": "vod_guangsu_gsm3u8",
+      "name": "光速采集",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 743,
+      "response_shape": "json:44"
+    },
+    {
+      "key": "vod_1080zyku",
+      "name": "优质资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 579,
+      "response_shape": "json:62"
+    },
+    {
+      "key": "vod_ckzy",
+      "name": "CK资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 211,
+      "response_shape": "json:2"
+    },
+    {
+      "key": "vod_ikun",
+      "name": "IKUN资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 155,
+      "response_shape": "json:53"
     }
   ]
 }
