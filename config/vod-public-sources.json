@@ -201,6 +201,19 @@
           "original_api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/at/json"
         }
       ]
+    },
+    {
+      "key": "vod_jacloud",
+      "name": "建安采集",
+      "type": 1,
+      "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
+      "transport_exception": "exact_user_authorized_http_ip_9981",
+      "discovered_via": [
+        {
+          "configuration_url": "https://szyyds.cn/tv/x.json",
+          "original_api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod"
+        }
+      ]
     }
   ],
   "source_discovery": {

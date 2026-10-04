@@ -24,6 +24,10 @@ MAX_SOURCES = 100
 MAX_RESPONSE_BYTES = 1_048_576
 MAX_SOURCE_NAME_CHARS = 80
 USER_AGENT = "MediaSourceManager-VOD-health/1.0"
+# This exact endpoint was supplied in the user's Xiaoma config and then checked
+# manually through category, search, and detail. Keep the exception exact so
+# registry edits cannot turn the public checker into a general HTTP/IP fetcher.
+LEGACY_HTTP_API = "http://154.219.117.232:9981/jacloudapi.php/provide/vod"
 
 
 class FeedError(ValueError):
@@ -40,6 +44,8 @@ def _normalize_api(value: Any) -> str:
         port = parts.port
     except ValueError as exc:
         raise FeedError("invalid_api_url") from exc
+    if value == LEGACY_HTTP_API:
+        return value
     if (
         parts.scheme.lower() != "https"
         or not parts.hostname
@@ -196,7 +202,11 @@ def build_command(
     config = build_tvbox_config(sources, include_keys)
     for path in output_paths:
         _atomic_json_write(path, config)
-    print("Built a TVBox source config with %d currently healthy T0/T1 entries." % len(config["sites"]))
+    source_label = "currently healthy" if health_report_path is not None else "registered"
+    print(
+        "Built a TVBox source config with %d %s T0/T1 entries."
+        % (len(config["sites"]), source_label)
+    )
     return 0
 
 
@@ -205,9 +215,15 @@ class _NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
-def _public_dns_only(host: str) -> bool:
+def _public_dns_only(host: str, port: int) -> bool:
     try:
-        addresses = socket.getaddrinfo(host, 443, type=socket.SOCK_STREAM)
+        literal = ipaddress.ip_address(host)
+    except ValueError:
+        literal = None
+    if literal is not None:
+        return literal.is_global
+    try:
+        addresses = socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)
     except OSError:
         return False
     if not addresses:
@@ -227,7 +243,8 @@ def _request_class_list(
 ) -> Tuple[str, int, str, int]:
     parts = urllib.parse.urlsplit(source["api"])
     host = parts.hostname or ""
-    if not _public_dns_only(host):
+    port = parts.port or (443 if parts.scheme == "https" else 80)
+    if not _public_dns_only(host, port):
         return "dns_or_address_rejected", 0, "", 0
     query = urllib.parse.urlencode({"ac": "class"})
     url = urllib.parse.urlunsplit(
@@ -303,6 +320,9 @@ def check_command(
             "key": source["key"],
             "name": source["name"],
             "type": source["type"],
+            "transport": "http_ip_nonstandard_port"
+            if source["api"] == LEGACY_HTTP_API
+            else "https",
             "status": result,
             "http_status": http_status,
             "duration_ms": duration_ms,
@@ -318,7 +338,7 @@ def check_command(
         .replace(microsecond=0)
         .isoformat()
         .replace("+00:00", "Z"),
-        "check": "one HTTPS ac=class request per source; no redirect, credentials, code execution, or media download",
+        "check": "one ac=class request per source; HTTPS except the exact user-authorized HTTP IP:9981 endpoint; no redirect, credentials, code execution, or media download",
         "probe_environment": (
             "github-actions/ubuntu-24.04"
             if os.environ.get("GITHUB_ACTIONS") == "true"

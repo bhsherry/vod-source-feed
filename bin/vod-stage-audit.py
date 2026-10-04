@@ -21,6 +21,9 @@ ROOT = Path(__file__).resolve().parents[1]
 MAX_RESPONSE_BYTES = 1_048_576
 USER_AGENT = "MediaSourceManager-VOD-stage-audit/1.0"
 SEARCH_TERM = "流浪地球"
+# Explicitly reviewed one-off exception for the direct API in the supplied
+# Xiaoma config. Do not broaden to other cleartext or IP-literal endpoints.
+LEGACY_HTTP_API = "http://154.219.117.232:9981/jacloudapi.php/provide/vod"
 
 
 class _NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -28,9 +31,15 @@ class _NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 
-def _public_dns_only(host: str) -> bool:
+def _public_dns_only(host: str, port: int) -> bool:
     try:
-        addresses = socket.getaddrinfo(host, 443, type=socket.SOCK_STREAM)
+        literal = ipaddress.ip_address(host)
+    except ValueError:
+        literal = None
+    if literal is not None:
+        return literal.is_global
+    try:
+        addresses = socket.getaddrinfo(host, port, type=socket.SOCK_STREAM)
     except OSError:
         return False
     if not addresses:
@@ -51,14 +60,32 @@ def _request(
 ) -> Tuple[str, int, str, bytes, int]:
     parts = urllib.parse.urlsplit(source["api"])
     host = parts.hostname or ""
+    legacy_http = source["api"] == LEGACY_HTTP_API
+    try:
+        is_ip_literal = ipaddress.ip_address(host) is not None
+    except ValueError:
+        is_ip_literal = False
+    safe_https = (
+        parts.scheme == "https"
+        and parts.port in (None, 443)
+        and parts.hostname is not None
+        and not is_ip_literal
+    )
+    exact_legacy_http = (
+        legacy_http
+        and parts.scheme == "http"
+        and host == "154.219.117.232"
+        and parts.port == 9981
+        and parts.path == "/jacloudapi.php/provide/vod"
+    )
+    port = parts.port or (443 if parts.scheme == "https" else 80)
     if (
-        parts.scheme != "https"
+        not (safe_https or exact_legacy_http)
         or not host
         or parts.username is not None
         or parts.password is not None
-        or parts.port not in (None, 443)
         or parts.fragment
-        or not _public_dns_only(host)
+        or not _public_dns_only(host, port)
     ):
         return "url_or_dns_rejected", 0, "", b"", 0
 
@@ -328,7 +355,7 @@ def main() -> int:
         if os.environ.get("GITHUB_ACTIONS") == "true"
         else "local",
         "search_term": SEARCH_TERM,
-        "method": "one ac=videolist search per key; one bounded detail request when a result ID is present; no redirects, credentials, or media downloads",
+        "method": "one ac=videolist search per key; one bounded detail request when a result ID is present; no redirects, credentials, or media downloads; exact user-authorized HTTP IP:9981 exception only",
         "results": results,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
