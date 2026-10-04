@@ -23,4 +23,4 @@ A successful category request confirms only that the endpoint currently returns 
 - `bin/vod-public-feed.py` — dependency-free generator and health checker
 - `.github/workflows/vod-source-feed.yml` — scheduled refresh workflow
 
-The current import contains 13 HTTPS CMS sources: 12 JSON APIs and one XML API. Spider / Java `type=3` entries are not represented as working CMS APIs; they require separate static analysis and native adapter work.
+The source registry contains 14 HTTPS CMS endpoints: 13 JSON APIs and one XML API. The import file includes endpoints whose category response passes the latest health check, so its size can vary with the runner's network location. The latest GitHub Actions check passed all 14 endpoints; an earlier Mac-side check saw one endpoint return 403. The health report identifies the probe environment. Spider / Java `type=3` entries are not represented as working CMS APIs; they require separate static analysis and native adapter work.
