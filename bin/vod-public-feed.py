@@ -4,6 +4,7 @@
 import argparse
 import ipaddress
 import json
+import os
 import re
 import socket
 import sys
@@ -318,6 +319,11 @@ def check_command(
         .isoformat()
         .replace("+00:00", "Z"),
         "check": "one HTTPS ac=class request per source; no redirect, credentials, code execution, or media download",
+        "probe_environment": (
+            "github-actions/ubuntu-24.04"
+            if os.environ.get("GITHUB_ACTIONS") == "true"
+            else "local"
+        ),
         "source_count": len(sources),
         "healthy_count": healthy,
         "sources": results,
