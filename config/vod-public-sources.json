@@ -84,6 +84,234 @@
       "name": "百度资源",
       "type": 1,
       "api": "https://api.apibdzy.com/api.php/provide/vod"
+    },
+    {
+      "key": "vod_360zy",
+      "name": "360资源",
+      "type": 1,
+      "api": "https://360zy.com/api.php/seaxml/vod/",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+          "original_api": "https://360zy.com/api.php/seaxml/vod/"
+        }
+      ]
+    },
+    {
+      "key": "vod_ffzy",
+      "name": "非凡资源",
+      "type": 1,
+      "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+          "original_api": "http://cj.ffzyapi.com/api.php/provide/vod/"
+        }
+      ]
+    },
+    {
+      "key": "vod_liangzi_xml",
+      "name": "量子 XML",
+      "type": 0,
+      "api": "https://cj.lziapi.com/api.php/provide/vod/at/xml/",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/debaters6/XYQ/master/0821.json",
+          "original_api": "https://cj.lziapi.com/api.php/provide/vod/at/xml/"
+        }
+      ]
+    },
+    {
+      "key": "vod_ffzy_xml",
+      "name": "非凡资源",
+      "type": 0,
+      "api": "https://cj.ffzyapi.com/api.php/provide/vod/at/xml/",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/debaters6/XYQ/master/0821.json",
+          "original_api": "http://cj.ffzyapi.com/api.php/provide/vod/at/xml/"
+        }
+      ]
+    },
+    {
+      "key": "vod_wujin",
+      "name": "无尽资源",
+      "type": 1,
+      "api": "https://api.wujinapi.me/api.php/provide/vod/",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+          "original_api": "https://api.wujinapi.me/api.php/provide/vod/?ac=list"
+        }
+      ]
+    },
+    {
+      "key": "vod_guangsu_gsm3u8",
+      "name": "光速采集",
+      "type": 1,
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+          "original_api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/"
+        }
+      ]
+    },
+    {
+      "key": "vod_1080zyku",
+      "name": "优质资源",
+      "type": 1,
+      "api": "https://api.1080zyku.com/inc/api_mac10.php",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+          "original_api": "https://api.1080zyku.com/inc/api_mac10.php?ac=list"
+        }
+      ]
+    },
+    {
+      "key": "vod_ckzy",
+      "name": "CK资源",
+      "type": 1,
+      "api": "https://ckzy.me/api.php/provide/vod/",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+          "original_api": "https://ckzy.me/api.php/provide/vod/?ac=list"
+        }
+      ]
+    },
+    {
+      "key": "vod_ikun",
+      "name": "IKUN资源",
+      "type": 1,
+      "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/at/json",
+      "discovered_via": [
+        {
+          "index_url": "http://tv.weidonglong.com/ysc5.json",
+          "configuration_url": "https://g.blfrp.cn/https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+          "original_api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/at/json"
+        }
+      ]
     }
-  ]
+  ],
+  "source_discovery": {
+    "method": "static extraction of direct type=0/1 API strings from JSON sites arrays; no Spider/JAR execution",
+    "hub": "http://tv.weidonglong.com/ysc5.json",
+    "hub_sha256": "8dba91127c3023759b9bd37647236f369ac94fe5e673c34ec566fd086db2c7f6",
+    "parsed_children": [
+      {
+        "url": "https://g.blfrp.cn/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+        "sha256": "3f30881d24582ed7e8061ecfd26ab5f32342ca4a65e5a22e30fd6abf48359c16",
+        "site_count": 298,
+        "type_counts": {
+          "3": 298
+        },
+        "direct_t01_count": 0
+      },
+      {
+        "url": "https://g.blfrp.cn/https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+        "sha256": "7fd479edf17b9a7fdc5ed9e53db543ae2c9389f85c5cb1980bb91255891fbbe5",
+        "site_count": 93,
+        "type_counts": {
+          "3": 89,
+          "1": 4
+        },
+        "direct_t01_count": 4
+      },
+      {
+        "url": "https://g.blfrp.cn/https://raw.githubusercontent.com/debaters6/XYQ/master/0821.json",
+        "sha256": "77cc28e883e3b58827cf028f8ea729cf1f0265fb6d135545f955e00e52de2642",
+        "site_count": 124,
+        "type_counts": {
+          "3": 113,
+          "4": 1,
+          "1": 6,
+          "0": 2
+        },
+        "direct_t01_count": 8
+      },
+      {
+        "url": "https://g.blfrp.cn/https://raw.githubusercontent.com/guot55/yg/main/pg/bh.json",
+        "sha256": "bcbf0ca06264a3c747171f3c5d04a6d0578fb0bd0b5fc7be3fc2e5026aa0c22e",
+        "site_count": 77,
+        "type_counts": {
+          "3": 71,
+          "4": 6
+        },
+        "direct_t01_count": 0
+      },
+      {
+        "url": "https://www.252035.xyz/z/FongMi.json",
+        "sha256": "e2ce3bab3cbf32355f7ad8295925972e1069807724072322e8b9e4b56e157af1",
+        "site_count": 43,
+        "type_counts": {
+          "3": 39,
+          "1": 4
+        },
+        "direct_t01_count": 4
+      },
+      {
+        "url": "https://www.yingm.cc/dm/dm.json",
+        "sha256": "4cd6fd0b453b02a809901aed5325173e8308a301e972ffaa4e2895e380efe698",
+        "site_count": 27,
+        "type_counts": {
+          "3": 27
+        },
+        "direct_t01_count": 0
+      },
+      {
+        "url": "https://android.lushunming.qzz.io/json/index.json",
+        "sha256": "2ecc3750b85740b71872002ff53d64cddc57ad4effa9d16fc2a601d3b7e1ab51",
+        "site_count": 44,
+        "type_counts": {
+          "3": 44
+        },
+        "direct_t01_count": 0
+      },
+      {
+        "url": "https://g.blfrp.cn/https://raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+        "sha256": "e3b73fd47fdcf3d68874a6e617514f6b8395fbf780558fa05bf6b3ff34ae2b1b",
+        "site_count": 151,
+        "type_counts": {
+          "3": 131,
+          "1": 20
+        },
+        "direct_t01_count": 20
+      }
+    ],
+    "imported_new_keys": [
+      "vod_360zy",
+      "vod_ffzy",
+      "vod_liangzi_xml",
+      "vod_ffzy_xml",
+      "vod_wujin",
+      "vod_guangsu_gsm3u8",
+      "vod_1080zyku",
+      "vod_ckzy",
+      "vod_ikun"
+    ],
+    "class_probe_checked_at": "2026-10-04T17:30:34Z",
+    "class_probe_environment": "local",
+    "class_probe_passed_keys": [
+      "vod_1080zyku",
+      "vod_360zy",
+      "vod_ckzy",
+      "vod_ffzy",
+      "vod_ffzy_xml",
+      "vod_guangsu_gsm3u8",
+      "vod_ikun",
+      "vod_liangzi_xml",
+      "vod_wujin"
+    ],
+    "class_probe_method": "one HTTPS ac=class request per source; no redirect, credentials, code execution, or media download"
+  }
 }
