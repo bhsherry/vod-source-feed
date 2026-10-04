@@ -1,27 +1,54 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-04T15:47:55Z",
+  "checked_at": "2026-10-04T16:24:30Z",
   "check": "one HTTPS ac=class request per source; no redirect, credentials, code execution, or media download",
   "source_count": 14,
-  "healthy_count": 13,
+  "healthy_count": 14,
   "sources": [
     {
-      "key": "vod_quantum",
-      "name": "量子资源",
+      "key": "vod_dytt_m3u8",
+      "name": "天堂采集",
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 2389,
+      "duration_ms": 733,
+      "response_shape": "json:32"
+    },
+    {
+      "key": "vod_guangsu",
+      "name": "光速资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 507,
       "response_shape": "json:44"
     },
     {
-      "key": "vod_sony_xml",
-      "name": "索尼资源 XML",
-      "type": 0,
+      "key": "vod_tianya",
+      "name": "天涯资源",
+      "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 2902,
-      "response_shape": "xml"
+      "duration_ms": 156,
+      "response_shape": "json:39"
+    },
+    {
+      "key": "vod_xinlang",
+      "name": "新浪资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 496,
+      "response_shape": "json:48"
+    },
+    {
+      "key": "vod_baofeng",
+      "name": "暴風资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 357,
+      "response_shape": "json:49"
     },
     {
       "key": "vod_jisu",
@@ -29,7 +56,7 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1560,
+      "duration_ms": 267,
       "response_shape": "json:48"
     },
     {
@@ -38,43 +65,8 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 830,
+      "duration_ms": 438,
       "response_shape": "json:61"
-    },
-    {
-      "key": "vod_baidu",
-      "name": "百度资源",
-      "type": 1,
-      "status": "http_error",
-      "http_status": 403,
-      "duration_ms": 778
-    },
-    {
-      "key": "vod_baofeng",
-      "name": "暴風资源",
-      "type": 1,
-      "status": "ok",
-      "http_status": 200,
-      "duration_ms": 1799,
-      "response_shape": "json:49"
-    },
-    {
-      "key": "vod_hongniu",
-      "name": "红牛资源",
-      "type": 1,
-      "status": "ok",
-      "http_status": 200,
-      "duration_ms": 1237,
-      "response_shape": "json:44"
-    },
-    {
-      "key": "vod_guangsu",
-      "name": "光速资源",
-      "type": 1,
-      "status": "ok",
-      "http_status": 200,
-      "duration_ms": 1052,
-      "response_shape": "json:44"
     },
     {
       "key": "vod_dytt",
@@ -82,35 +74,35 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 2351,
+      "duration_ms": 244,
       "response_shape": "json:32"
     },
     {
-      "key": "vod_tianya",
-      "name": "天涯资源",
-      "type": 1,
+      "key": "vod_sony_xml",
+      "name": "索尼资源 XML",
+      "type": 0,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 2006,
-      "response_shape": "json:39"
+      "duration_ms": 288,
+      "response_shape": "xml"
     },
     {
-      "key": "vod_feifan",
-      "name": "非凡资源",
+      "key": "vod_hongniu",
+      "name": "红牛资源",
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1218,
-      "response_shape": "json:31"
+      "duration_ms": 368,
+      "response_shape": "json:44"
     },
     {
-      "key": "vod_dytt_m3u8",
-      "name": "天堂采集",
+      "key": "vod_quantum",
+      "name": "量子资源",
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1592,
-      "response_shape": "json:32"
+      "duration_ms": 318,
+      "response_shape": "json:44"
     },
     {
       "key": "vod_shandian",
@@ -118,17 +110,26 @@
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1696,
+      "duration_ms": 258,
       "response_shape": "json:59"
     },
     {
-      "key": "vod_xinlang",
-      "name": "新浪资源",
+      "key": "vod_feifan",
+      "name": "非凡资源",
       "type": 1,
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1728,
-      "response_shape": "json:48"
+      "duration_ms": 751,
+      "response_shape": "json:31"
+    },
+    {
+      "key": "vod_baidu",
+      "name": "百度资源",
+      "type": 1,
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 257,
+      "response_shape": "json:54"
     }
   ]
 }
