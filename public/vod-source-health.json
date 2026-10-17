@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-16T22:05:27Z",
+  "checked_at": "2026-10-17T21:28:10Z",
   "check": "one ac=class request per source; HTTPS except the exact user-authorized HTTP IP:9981 endpoint; no redirect, credentials, code execution, or media download",
   "probe_environment": "github-actions/ubuntu-24.04",
   "source_count": 24,
@@ -13,7 +13,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 633,
+      "duration_ms": 710,
       "response_shape": "json:32"
     },
     {
@@ -23,7 +23,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 516,
+      "duration_ms": 169,
       "response_shape": "json:44"
     },
     {
@@ -33,7 +33,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 128,
+      "duration_ms": 125,
       "response_shape": "json:39"
     },
     {
@@ -43,7 +43,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 494,
+      "duration_ms": 488,
       "response_shape": "json:48"
     },
     {
@@ -53,7 +53,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 215,
+      "duration_ms": 419,
       "response_shape": "json:49"
     },
     {
@@ -63,7 +63,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 502,
+      "duration_ms": 334,
       "response_shape": "json:48"
     },
     {
@@ -73,7 +73,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 107,
+      "duration_ms": 56,
       "response_shape": "json:61"
     },
     {
@@ -83,7 +83,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 200,
+      "duration_ms": 484,
       "response_shape": "json:32"
     },
     {
@@ -93,7 +93,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 198,
+      "duration_ms": 207,
       "response_shape": "xml"
     },
     {
@@ -103,7 +103,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 168,
+      "duration_ms": 239,
       "response_shape": "json:44"
     },
     {
@@ -113,7 +113,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 41,
+      "duration_ms": 213,
       "response_shape": "json:44"
     },
     {
@@ -123,7 +123,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 155,
+      "duration_ms": 201,
       "response_shape": "json:59"
     },
     {
@@ -133,7 +133,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 828,
+      "duration_ms": 820,
       "response_shape": "json:31"
     },
     {
@@ -143,7 +143,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 128,
+      "duration_ms": 108,
       "response_shape": "json:54"
     },
     {
@@ -153,7 +153,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 623,
+      "duration_ms": 1345,
       "response_shape": "json:51"
     },
     {
@@ -163,7 +163,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1002,
+      "duration_ms": 781,
       "response_shape": "json:31"
     },
     {
@@ -173,7 +173,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 200,
+      "duration_ms": 188,
       "response_shape": "xml"
     },
     {
@@ -183,7 +183,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1071,
+      "duration_ms": 863,
       "response_shape": "xml"
     },
     {
@@ -193,7 +193,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 63,
+      "duration_ms": 80,
       "response_shape": "json:63"
     },
     {
@@ -203,7 +203,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 516,
+      "duration_ms": 644,
       "response_shape": "json:44"
     },
     {
@@ -213,7 +213,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 270,
+      "duration_ms": 237,
       "response_shape": "json:62"
     },
     {
@@ -223,7 +223,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 82,
+      "duration_ms": 86,
       "response_shape": "json:2"
     },
     {
@@ -233,7 +233,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 96,
+      "duration_ms": 224,
       "response_shape": "json:53"
     },
     {
@@ -243,7 +243,7 @@
       "transport": "http_ip_nonstandard_port",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 332,
+      "duration_ms": 338,
       "response_shape": "json:21"
     }
   ]
