@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-23T22:10:02Z",
+  "checked_at": "2026-10-24T21:36:35Z",
   "check": "one ac=class request per source; HTTPS except the exact user-authorized HTTP IP:9981 endpoint; no redirect, credentials, code execution, or media download",
   "probe_environment": "github-actions/ubuntu-24.04",
   "source_count": 24,
-  "healthy_count": 23,
+  "healthy_count": 24,
   "sources": [
     {
       "key": "vod_dytt_m3u8",
@@ -13,7 +13,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 622,
+      "duration_ms": 772,
       "response_shape": "json:32"
     },
     {
@@ -23,7 +23,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 140,
+      "duration_ms": 125,
       "response_shape": "json:44"
     },
     {
@@ -33,7 +33,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 217,
+      "duration_ms": 202,
       "response_shape": "json:39"
     },
     {
@@ -43,7 +43,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 159,
+      "duration_ms": 465,
       "response_shape": "json:48"
     },
     {
@@ -53,7 +53,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 319,
+      "duration_ms": 325,
       "response_shape": "json:49"
     },
     {
@@ -63,7 +63,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 92,
+      "duration_ms": 266,
       "response_shape": "json:48"
     },
     {
@@ -73,7 +73,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 260,
+      "duration_ms": 292,
       "response_shape": "json:61"
     },
     {
@@ -83,7 +83,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 423,
+      "duration_ms": 215,
       "response_shape": "json:32"
     },
     {
@@ -93,7 +93,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 291,
+      "duration_ms": 279,
       "response_shape": "xml"
     },
     {
@@ -103,7 +103,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 154,
+      "duration_ms": 220,
       "response_shape": "json:44"
     },
     {
@@ -113,7 +113,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 318,
+      "duration_ms": 309,
       "response_shape": "json:44"
     },
     {
@@ -123,7 +123,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 277,
+      "duration_ms": 261,
       "response_shape": "json:59"
     },
     {
@@ -131,9 +131,10 @@
       "name": "非凡资源",
       "type": 1,
       "transport": "https",
-      "status": "http_error",
-      "http_status": 403,
-      "duration_ms": 1220
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 627,
+      "response_shape": "json:31"
     },
     {
       "key": "vod_baidu",
@@ -142,7 +143,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 244,
+      "duration_ms": 208,
       "response_shape": "json:54"
     },
     {
@@ -152,7 +153,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1111,
+      "duration_ms": 770,
       "response_shape": "json:51"
     },
     {
@@ -162,7 +163,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 992,
+      "duration_ms": 1042,
       "response_shape": "json:31"
     },
     {
@@ -172,7 +173,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 287,
+      "duration_ms": 314,
       "response_shape": "xml"
     },
     {
@@ -182,7 +183,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 953,
+      "duration_ms": 1118,
       "response_shape": "xml"
     },
     {
@@ -192,7 +193,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 203,
+      "duration_ms": 284,
       "response_shape": "json:63"
     },
     {
@@ -202,7 +203,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 653,
+      "duration_ms": 151,
       "response_shape": "json:44"
     },
     {
@@ -212,7 +213,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 614,
+      "duration_ms": 650,
       "response_shape": "json:62"
     },
     {
@@ -222,7 +223,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 257,
+      "duration_ms": 217,
       "response_shape": "json:2"
     },
     {
@@ -232,7 +233,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 546,
+      "duration_ms": 237,
       "response_shape": "json:53"
     },
     {
@@ -242,7 +243,7 @@
       "transport": "http_ip_nonstandard_port",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 399,
+      "duration_ms": 366,
       "response_shape": "json:21"
     }
   ]
