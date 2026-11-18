@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-17T02:28:36Z",
+  "checked_at": "2026-11-18T01:37:03Z",
   "check": "one ac=class request per source; HTTPS except the exact user-authorized HTTP IP:9981 endpoint; no redirect, credentials, code execution, or media download",
   "probe_environment": "github-actions/ubuntu-24.04",
   "source_count": 24,
-  "healthy_count": 22,
+  "healthy_count": 24,
   "sources": [
     {
       "key": "vod_dytt_m3u8",
@@ -13,7 +13,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 158,
+      "duration_ms": 728,
       "response_shape": "json:32"
     },
     {
@@ -21,9 +21,10 @@
       "name": "光速资源",
       "type": 1,
       "transport": "https",
-      "status": "request_failed",
-      "http_status": 0,
-      "duration_ms": 10051
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 2252,
+      "response_shape": "json:44"
     },
     {
       "key": "vod_tianya",
@@ -32,7 +33,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 211,
+      "duration_ms": 241,
       "response_shape": "json:39"
     },
     {
@@ -42,7 +43,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 143,
+      "duration_ms": 151,
       "response_shape": "json:48"
     },
     {
@@ -52,7 +53,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 372,
+      "duration_ms": 433,
       "response_shape": "json:49"
     },
     {
@@ -62,7 +63,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 319,
+      "duration_ms": 344,
       "response_shape": "json:48"
     },
     {
@@ -72,7 +73,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 152,
+      "duration_ms": 103,
       "response_shape": "json:61"
     },
     {
@@ -82,7 +83,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 455,
+      "duration_ms": 96,
       "response_shape": "json:32"
     },
     {
@@ -92,7 +93,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 211,
+      "duration_ms": 204,
       "response_shape": "xml"
     },
     {
@@ -102,7 +103,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 109,
+      "duration_ms": 180,
       "response_shape": "json:44"
     },
     {
@@ -112,7 +113,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 848,
+      "duration_ms": 628,
       "response_shape": "json:40"
     },
     {
@@ -122,7 +123,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 198,
+      "duration_ms": 162,
       "response_shape": "json:59"
     },
     {
@@ -132,7 +133,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 118,
+      "duration_ms": 502,
       "response_shape": "json:31"
     },
     {
@@ -142,7 +143,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 162,
+      "duration_ms": 159,
       "response_shape": "json:54"
     },
     {
@@ -152,7 +153,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 711,
+      "duration_ms": 906,
       "response_shape": "json:51"
     },
     {
@@ -162,7 +163,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1039,
+      "duration_ms": 546,
       "response_shape": "json:31"
     },
     {
@@ -172,7 +173,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 741,
+      "duration_ms": 678,
       "response_shape": "xml"
     },
     {
@@ -182,7 +183,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 1012,
+      "duration_ms": 571,
       "response_shape": "xml"
     },
     {
@@ -192,7 +193,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 98,
+      "duration_ms": 219,
       "response_shape": "json:63"
     },
     {
@@ -200,9 +201,10 @@
       "name": "光速采集",
       "type": 1,
       "transport": "https",
-      "status": "request_failed",
-      "http_status": 0,
-      "duration_ms": 10034
+      "status": "ok",
+      "http_status": 200,
+      "duration_ms": 1108,
+      "response_shape": "json:44"
     },
     {
       "key": "vod_1080zyku",
@@ -211,7 +213,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 460,
+      "duration_ms": 493,
       "response_shape": "json:62"
     },
     {
@@ -221,7 +223,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 122,
+      "duration_ms": 179,
       "response_shape": "json:2"
     },
     {
@@ -231,7 +233,7 @@
       "transport": "https",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 278,
+      "duration_ms": 167,
       "response_shape": "json:53"
     },
     {
@@ -241,7 +243,7 @@
       "transport": "http_ip_nonstandard_port",
       "status": "ok",
       "http_status": 200,
-      "duration_ms": 326,
+      "duration_ms": 324,
       "response_shape": "json:21"
     }
   ]
